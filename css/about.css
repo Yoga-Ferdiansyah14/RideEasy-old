@@ -1,0 +1,13 @@
+.about-hero {
+    margin-top: 80px;
+    padding: 28px;
+    text-align: center;
+}
+
+/* Bagian grid untuk konten "About" */
+.about-grid {
+    display: grid;                       /* Menggunakan layout grid untuk menata elemen */
+    grid-template-columns: 1fr 1fr;      /* Membagi area menjadi 2 kolom dengan lebar sama */
+    gap: 18px;                           /* Jarak antar kolom dan baris */
+    margin-top: 18px;                    /* Memberi jarak dari elemen di atasnya */
+}

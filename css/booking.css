@@ -1,0 +1,79 @@
+/* ------------------- BAGIAN UTAMA ------------------- */
+.booking-section {
+    margin: 80px auto;      /* Jarak atas-bawah 80px, posisi di tengah */
+    padding: 20px 0;        /* Ruang dalam atas-bawah 20px */
+}
+
+/* ------------------- BOX RINGKASAN MOTOR ------------------- */
+.motor-summary-box {
+    display: flex;          /* Supaya elemen di dalamnya sejajar horizontal */
+    gap: 12px;              /* Jarak antar elemen 12px */
+    align-items: center;    /* Semua elemen sejajar di tengah vertikal */
+    padding: 12px;          /* Ruang dalam di sekeliling 12px */
+}
+
+/* Gambar preview motor */
+.motor-summary-box .img-preview {
+    width: 120px;           /* Lebar gambar */
+    height: 80px;           /* Tinggi gambar */
+    object-fit: cover;      /* Gambar dipotong biar proporsional */
+    border-radius: 8px;     /* Sudut gambar dibulatkan */
+}
+
+/* Judul atau nama motor */
+.motor-summary-box .info h4 {
+    color: #d88847;         /* Warna hijau tua */
+    margin-bottom: 6px;     /* Jarak bawah sedikit */
+}
+
+/* ------------------- FORM PEMESANAN ------------------- */
+.booking-form {
+    padding: 18px;          /* Ruang dalam form */
+    border-radius: 12px;    /* Sudut form melengkung */
+}
+
+/* Setiap baris form berisi beberapa kolom */
+.form-row {
+    display: flex;          /* Kolom sejajar ke samping */
+    gap: 12px;              /* Jarak antar kolom */
+}
+
+/* Setiap kolom dalam form */
+.form-group {
+    flex: 1;                        /* Ukuran fleksibel menyesuaikan ruang */
+    display: flex;
+    flex-direction: column;         /* Label di atas input */
+    margin-bottom: 12px;            /* Jarak antar baris */
+}
+
+/* Label (judul di atas input) */
+.form-group label {
+    font-weight: 700;       /* Tebal agar jelas */
+    margin-bottom: 6px;     /* Jarak dari input */
+}
+
+/* Kolom input (nama, tanggal, durasi, dsb) */
+.form-group input {
+    padding: 10px;                  /* Ruang dalam */
+    border-radius: 8px;             /* Sudut melengkung */
+    border: 1px solid #e6e6e6;      /* Garis tipis abu */
+    background: #fff;               /* Warna putih */
+}
+
+/* Untuk kolom yang dibagi dua dalam satu baris */
+.form-row .form-group.half {
+    flex: 1;                /* Ukurannya dibagi rata */
+}
+
+/* ------------------- TOMBOL ------------------- */
+.btn-block {
+    margin-top: 12px;       /* Jarak dari atas */
+    padding: 10px;          /* Ruang dalam */
+    border-radius: 10px;    /* Sudut melengkung */
+}
+
+/* ------------------- PESAN BERHASIL ------------------- */
+.pesan-sukses {
+    padding: 20px;          /* Ruang dalam */
+    text-align: center;     /* Teks di tengah */
+}

@@ -1,0 +1,136 @@
+/* Mengimpor font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset dasar untuk semua elemen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style dasar untuk body halaman */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f7f6;
+    color: #223;
+}
+
+/* Menghapus garis bawah pada link */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Fokus container tanpa outline (biar tampilan bersih) */
+container:focus {
+    outline: none;
+}
+
+/* Membatasi lebar maksimal dan posisi tengah */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header utama (posisi tetap di atas layar) */
+.site-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 60;
+    background: transparent;
+    transition: all 0.25s ease;
+    padding: 14px 0;
+}
+
+/* Style header ketika user scroll ke bawah */
+.site-header.scrolled {
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 10px 0;
+}
+
+/* Mengatur isi dalam header (logo dan navigasi sejajar) */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style logo situs */
+.logo {
+    color: #00695c;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* Style link navigasi (awal berwarna putih) */
+.nav .nav-link {
+    margin-left: 18px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+/* Saat header berubah (scrolled), warna nav jadi gelap */
+.site-header.scrolled .nav .nav-link {
+    color: #bebebe;
+}
+
+/* Tombol dasar */
+.btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 10px;
+    background: #eee;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tombol utama (warna hijau tua khas tema) */
+.btn-primary {
+    background: #00695c;
+    color: #fff;
+}
+
+/* Tombol transparan dengan border putih */
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+/* Judul tiap section */
+.section-title {
+    margin: 28px 0 12px;
+    color: #d88847;
+}
+
+/* Kartu konten (misalnya card produk atau motor) */
+.card {
+    background: #000000;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.751);
+}
+
+/* Bagian footer situs */
+.site-footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #667;
+    text-align: center;
+}
+
+/* ===== UTILITAS TAMBAHAN ===== */
+
+/* Tombol kecil (variasi dari .btn) */
+.btn-sm {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+}

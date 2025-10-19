@@ -1,0 +1,157 @@
+/* ---------------- HERO SECTION ---------------- */
+
+/* Bagian utama hero (bagian atas halaman dengan video dan teks) */
+.hero {
+    position: relative;
+    height: 60vh;                    /* tinggi hero: 60% dari tinggi layar */
+    min-height: 420px;               /* batas tinggi minimum agar tidak kependekan */
+    display: flex;                   /* untuk memposisikan konten di tengah */
+    align-items: center;             /* vertikal tengah */
+    justify-content: center;         /* horizontal tengah */
+    overflow: hidden;                /* biar elemen video tidak keluar area hero */
+    margin-top: 60px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Video latar belakang hero */
+.hero-video {
+    position: absolute;
+    inset: 0;                        /* menutupi seluruh area hero */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;               /* agar video menyesuaikan tanpa distorsi */
+    z-index: 0;
+    filter: brightness(0.55);        /* sedikit gelap biar teksnya kontras */
+}
+
+/* Lapisan gradasi gelap di atas video */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+    z-index: 1;                      /* di atas video tapi di bawah teks */
+}
+
+/* Konten teks di tengah hero */
+.hero-content {
+    position: relative;
+    z-index: 2;                      /* paling atas agar terlihat di atas video */
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Judul utama di hero */
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+}
+
+/* Paragraf deskripsi di hero */
+.hero-content p {
+    opacity: 0.95;
+    margin-bottom: 16px;
+}
+
+/* Tombol (call to action) di hero */
+.hero-cta .btn {
+    margin: 0 6px;
+}
+
+/* ---------------- FILTER SECTION ---------------- */
+
+/* Bagian filter pencarian motor */
+.filter-section {
+    margin-top: 24px;
+    padding: 14px 0;
+}
+
+/* Container semua elemen filter */
+.filters {
+    display: flex;
+    gap: 10px;                       /* jarak antar elemen filter */
+    align-items: center;
+    flex-wrap: wrap;                 /* biar responsif (turun ke bawah kalau sempit) */
+}
+
+/* Style untuk input dan select di filter */
+.filters select,
+.filters input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6eef0;
+    background: #e9e9e9;
+}
+
+/* ---------------- GRID MOTOR SECTION ---------------- */
+
+/* Tata letak grid untuk kartu motor */
+.motor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* responsif otomatis */
+    gap: 18px;
+    margin: 18px 0 60px;
+}
+
+/* Kartu motor individual */
+.motor-card {
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s; /* efek hover halus */
+    cursor: pointer;
+}
+
+/* Efek hover pada kartu motor */
+.motor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2,12,10,0.06);
+}
+
+/* Gambar motor di dalam kartu */
+.card-media img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Bagian isi teks pada kartu motor */
+.card-body {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Judul nama motor */
+.card-body h3 {
+    color: #f4f4f4;
+    margin-bottom: 6px;
+}
+
+/* Spesifikasi singkat motor (misal: tipe, cc, dsb) */
+.card-body .spec {
+    font-size: 0.9rem;
+    color: #5a6b66;
+    margin-bottom: 10px;
+}
+
+/* Bagian bawah kartu (harga dan tombol) */
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Warna dan gaya harga */
+.price {
+    color: #ff5722;
+    font-weight: 700;
+}
+
+
+

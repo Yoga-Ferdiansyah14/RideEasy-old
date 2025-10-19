@@ -1,0 +1,133 @@
+/* ===========================
+   Layout utama halaman detail
+   =========================== */
+
+/* 🔵 Navigasi breadcrumb di atas halaman */
+.breadcrumb {
+    margin: 80px 0 10px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* 🔵 Bagian atas halaman (gambar & info motor berdampingan) */
+.detail-top {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    align-items: flex-start;
+}
+
+/* 🔵 Kolom untuk gambar utama motor */
+.image-column {
+    flex: 0.9;
+    min-width: 300px;
+}
+
+/* 🔵 Gaya untuk gambar di dalam galeri */
+.image-column .gallery img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 🔵 Kolom untuk informasi detail motor (judul, harga, deskripsi) */
+.info-column {
+    flex: 1.1;
+    min-width: 300px;
+}
+
+/* 🔵 Baris judul dan badge (status motor atau kategori) */
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* 🔵 Judul motor */
+.title-row h1 {
+    color: #f0f0f0;
+    margin-bottom: 6px;
+}
+
+/* 🔵 Badge kecil, biasanya untuk kategori (contoh: “Populer”, “Baru”) */
+.badge {
+    background: #e8f6f4;
+    color: #00695c;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+/* 🔵 Deskripsi singkat motor */
+.short-desc {
+    color: #f6f8f8;
+    margin: 8px 0;
+}
+
+/* 🔵 Spesifikasi motor dalam bentuk list */
+.specs {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    color: #ebebeb;
+}
+
+/* 🔵 Setiap item spesifikasi diberi garis bawah putus-putus */
+.specs li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #eef6f6;
+}
+
+/* 🔵 Baris harga per hari & total harga */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+/* 🔵 Harga sewa per hari */
+.price-per-day {
+    color: #198bbc;
+    font-weight: 800;
+}
+
+/* 🔵 Total harga (hasil perhitungan durasi × harga per hari) */
+.total-price {
+    color: #ff5722;
+    font-weight: 800;
+}
+
+/* 🔵 Panel pemesanan (form input tanggal & tombol sewa) */
+.rent-panel {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fbfdfc, #ffffff);
+}
+
+/* 🔵 Label untuk setiap input di form pemesanan */
+.rent-panel label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+/* 🔵 Input dan dropdown pada form pemesanan */
+.rent-panel select,
+.rent-panel input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6efee;
+    background: #fff;
+}
+
+/* 🔵 Bagian informasi tambahan di bawah (misal: syarat sewa, ulasan, dsb.) */
+.more-info {
+    margin-top: 18px;
+    padding: 16px;
+}

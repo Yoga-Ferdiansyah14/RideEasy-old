@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RideEasy — Rental Motor Jogja</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">RideEasy</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO with cinematic looping background video (replace img/hero.mp4 with your video) -->
+    <section class="hero">
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline poster="img/hero-poster.jpg">
+        <source src="img/hero.mp4" type="video/mp4">
+        <!-- fallback -->
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <h1>RideEasy — Sewa Motor di Yogyakarta</h1>
+        <p>Cari, bandingkan, dan pesan motor dengan cepat. Jalan-jalan di Jogja? Sewa motor, urusan beres.</p>
+        <div class="hero-cta">
+          <a href="#daftar-motor" class="btn btn-primary">Lihat Motor</a>
+          <a href="about.html" class="btn btn-outline">Tentang Kami</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-section container">
+      <div class="filters">
+        <select id="filterJenis"><option value="">Semua Jenis</option><option value="matic">Matic</option><option value="manual">Manual</option></select>
+        <select id="filterCC"><option value="">Semua CC</option><option value="110">110 cc</option><option value="125">125 cc</option><option value="150">150 cc</option></select>
+        <select id="filterHarga"><option value="">Semua Harga</option><option value="low">Rp50.000 - Rp100.000</option><option value="mid">Rp100.000 - Rp150.000</option><option value="high">> Rp150.000</option></select>
+        <input id="searchBox" placeholder="Cari model, tipe..." />
+      </div>
+    </section>
+
+    <section id="daftar-motor" class="motor-list container">
+      <h2 class="section-title">Pilihan Motor</h2>
+      <div class="motor-grid" id="motorGrid">
+        <!-- cards injected by JS if desired; sample static cards below -->
+        <div class="motor-card" data-key="nmax" data-jenis="matic" data-cc="125" data-harga="120000">
+          <div class="card-media"><img src="img/motor1.jpg" alt="Yamaha NMAX"></div>
+          <div class="card-body">
+            <h3>Yamaha NMAX 125</h3>
+            <p class="spec">Matic • 125cc</p>
+            <div class="card-bottom">
+              <div class="price">Rp120.000 / hari</div>
+              <a class="btn btn-sm" href="detail.html?motor=nmax">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="motor-card" data-key="cb150r" data-jenis="manual" data-cc="150" data-harga="130000">
+          <div class="card-media"><img src="img/motor2.jpg" alt="Honda CB150R"></div>
+          <div class="card-body">
+            <h3>Honda CB150R</h3>
+            <p class="spec">Manual • 150cc</p>
+            <div class="card-bottom">
+              <div class="price">Rp130.000 / hari</div>
+              <a class="btn btn-sm" href="detail.html?motor=cb150r">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="motor-card" data-key="beat" data-jenis="matic" data-cc="110" data-harga="90000">
+          <div class="card-media"><img src="img/motor3.jpg" alt="Honda Beat"></div>
+          <div class="card-body">
+            <h3>Honda Beat 110</h3>
+            <p class="spec">Matic • 110cc</p>
+            <div class="card-bottom">
+              <div class="price">Rp90.000 / hari</div>
+              <a class="btn btn-sm" href="detail.html?motor=beat">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="why container">
+      <h2 class="section-title">Kenapa Pilih RideEasy?</h2>
+      <div class="why-grid">
+        <div class="why-card card"><h4>Motor Terawat</h4><p>Rutin servis & cek sebelum disewakan.</p></div>
+        <div class="why-card card"><h4>Booking Mudah</h4><p>Pesan online tanpa ribet.</p></div>
+        <div class="why-card card"><h4>Support 24/7</h4><p>Hubungi kami via WhatsApp kapan saja.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2025 RideEasy</div>
+        <div>Jl. Kaliurang Km 5 &middot; Sleman &middot; Yogyakarta</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Navbar color change on scroll
+    (function(){
+      const header = document.querySelector('.site-header');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 60) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+      });
+      // simple entry animations for sections
+      gsap.utils.toArray('section').forEach((sec, i) => {
+        gsap.fromTo(sec, {opacity:0, y:30},{opacity:1, y:0, duration:0.8, delay: i*0.12, scrollTrigger:{trigger:sec, start:'top 80%'}});
+      });
+      // slide-like transitions for elements with .section-slide
+      gsap.utils.toArray('.section-slide').forEach((el, idx) => {
+        gsap.fromTo(el, {x:50,opacity:0},{x:0,opacity:1,duration:0.7,scrollTrigger:{trigger:el, start:'top 85%'}});
+      });
+    })();
+  </script>
+</body>
+</html>
