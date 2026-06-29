@@ -48,11 +48,7 @@ rental-motor/
 
 # ✨ Pembuat
 
-Anggota :
-Ahmad Yoga Ferdiansyah (24091397078) 
-Tengku Muhammad Farelino Hatif (24091397096) 
-Ega Khamidatin Niswa (24091397090) 
-
+Ahmad Yoga Ferdiansyah (24091397078)  
 Mata Kuliah : Pemrograman Web
 kelas : 2024C
 Prodi : D4 Manajemen Informatika
